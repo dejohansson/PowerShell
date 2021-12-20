@@ -5,3 +5,4 @@ Import-Module -Name Terminal-Icons
 Set-PoshPrompt -Theme ~/Documents/PowerShell/omp/custom-theme.omp.json
 
 function ws { Set-Location "C:\Workspace\" }
+function elevate { Start-Process -FilePath "pwsh" -Verb RunAs }

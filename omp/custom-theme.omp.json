@@ -8,13 +8,14 @@
       "vertical_offset": 0,
       "segments": [
         {
-          "type": "os",
+          "type": "shell",
           "style": "diamond",
           "leading_diamond": "",
-          "foreground": "#cacaca",
+          "trailing_diamond": "",
+          "foreground": "#00a2ff",
           "background": "#112738",
           "properties": {
-            "postfix": " |"
+            "postfix": " <#0a1721>|</>"
           }
         },
         {
@@ -23,7 +24,7 @@
           "leading_diamond": "",
           "powerline_symbol": "\uE0B0",
           "properties": {
-            "prefix": "  ",
+            "prefix": " ",
             "style": "folder"
           },
           "style": "powerline",
@@ -32,17 +33,29 @@
         },
         {
           "background": "#112738",
-          "foreground": "#00a2ff",
+          "foreground": "#48ff00",
           "leading_diamond": "",
           "trailing_diamond": "\uE0B0",
           "powerline_symbol": "\uE0B0",
           "properties": {
+            "prefix": "<#0a1721>\ue0b1  </>",
             "fetch_stash_count": true,
             "fetch_upstream_icon": true,
             "template": "{{ .UpstreamIcon }}{{ .HEAD }}{{ if gt .StashCount 0 }}  {{ .StashCount }}{{ end }}"
           },
-          "style": "diamond",
+          "style": "powerline",
           "type": "git"
+        },
+        {
+          "type": "root",
+          "style": "powerline",
+          "powerline_symbol": "\uE0B0",
+          "foreground": "#fffb00",
+          "background": "#112738",
+          "properties": {
+            "prefix": "<#0a1721>\ue0b1 </>",
+            "root_icon": "\uF0E7"
+          }
         }
       ]
     }
