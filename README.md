@@ -1,4 +1,4 @@
-# Installation Steps
+# Setup
 
 ## PowerShell
 
