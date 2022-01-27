@@ -10,6 +10,8 @@ Install-Module 'oh-my-posh' -Scope CurrentUser -Force -AllowClobber
 Install-Module -Name 'Terminal-Icons' -Repository PSGallery
 ```
 
+Install and use a [font with glyph support](https://www.nerdfonts.com/font-downloads) in the terminal.
+
 ## .bashrc Contents
 
 ``` bash
