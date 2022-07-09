@@ -2,8 +2,11 @@ $InformationPreference = "Continue"
 
 Import-Module oh-my-posh
 Import-Module -Name Terminal-Icons
+Import-Module -Name CompletionPredictor
 
 Set-PoshPrompt -Theme $PSScriptRoot/omp/custom-theme.omp.json
+Set-PSReadLineOption -PredictionSource HistoryAndPlugin
+Set-PSReadLineKeyHandler -Chord "Ctrl+f" -Function ForwardWord
 
 function home { Set-Location "~" }
 function elevate { Start-Process -FilePath "pwsh" -Verb RunAs }

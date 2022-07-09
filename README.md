@@ -2,15 +2,23 @@
 
 ## PowerShell
 
-``` powershell
-Install-Module 'oh-my-posh' -Scope CurrentUser -Force -AllowClobber
-```
-
-``` powershell
-Install-Module -Name 'Terminal-Icons' -Repository PSGallery
-```
-
 Install and use a [font with glyph support](https://www.nerdfonts.com/font-downloads) in the terminal.
+
+``` powershell
+Install-Module "oh-my-posh" -Scope CurrentUser -AllowClobber -Force -Repository PSGallery
+```
+
+``` powershell
+Install-Module "Terminal-Icons" -Force -Repository PSGallery
+```
+
+``` powershell
+Install-Module PSReadLine -Force -Repository PSGallery
+```
+
+``` powershell
+Install-Module CompletionPredictor -Force -Repository PSGallery
+```
 
 ## .bashrc Contents
 
