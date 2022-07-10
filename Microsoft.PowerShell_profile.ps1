@@ -27,11 +27,13 @@ $PSReadLineOptions = @{
         String                 = "`e[36m"
         Type                   = "`e[37m"
         Variable               = "`e[92m"
-        Default           = "`e[37m"
+        Default                = "`e[37m"
     }
 }
 Set-PSReadLineOption @PSReadLineOptions
-Set-PSReadLineKeyHandler -Chord "Ctrl+f" -Function ForwardWord
+Set-PSReadLineKeyHandler -Chord "Ctrl+<" -Function ForwardWord
+Set-PSReadLineKeyHandler -Chord "Tab" -Function TabCompleteNext
+Set-PSReadLineKeyHandler -Chord "Ctrl+Spacebar" -Function MenuComplete
 
 function home { Set-Location "~" }
 function elevate { Start-Process -FilePath "pwsh" -Verb RunAs }
