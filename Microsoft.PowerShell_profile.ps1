@@ -5,7 +5,23 @@ Import-Module -Name Terminal-Icons
 Import-Module -Name CompletionPredictor
 
 Set-PoshPrompt -Theme $PSScriptRoot/omp/custom-theme.omp.json
-Set-PSReadLineOption -PredictionSource HistoryAndPlugin
+
+$PSReadLineOptions = @{
+    PredictionSource    = "HistoryAndPlugin"
+    HistoryNoDuplicates = $true
+    Colors              = @{
+        Command            = "`e[93m"
+        Number             = "`e[97m"
+        Member             = "`e[97m"
+        Operator           = "`e[90m"
+        Type               = "`e[37m"
+        Variable           = "`e[92m"
+        Parameter          = "`e[90m"
+        ContinuationPrompt = "`e[37m"
+        Default            = "`e[37m"
+    }
+}
+Set-PSReadLineOption @PSReadLineOptions
 Set-PSReadLineKeyHandler -Chord "Ctrl+f" -Function ForwardWord
 
 function home { Set-Location "~" }
